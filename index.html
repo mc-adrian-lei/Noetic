@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noetic Resonator - Periodic Table of Consciousness</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <!-- App Header -->
+    <header class="app-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-left">
+                    <button class="btn btn--secondary menu-btn" aria-label="Menu">
+                        <span class="material-icons">menu</span>
+                    </button>
+                    <div class="title-section">
+                        <h1>Noetic Resonator</h1>
+                        <p class="subtitle">Symbolic Cognition & Developmental Architecture</p>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <button class="btn btn--secondary search-toggle" aria-label="Toggle search">
+                        <span class="material-icons">search</span>
+                    </button>
+                    <button class="btn btn--secondary theme-toggle" aria-label="Toggle theme">
+                        <span class="material-icons">brightness_6</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-container" id="search-container">
+        <div class="container">
+            <div class="search-wrapper">
+                <span class="material-icons">search</span>
+                <input type="text" 
+                       id="element-search" 
+                       class="form-control" 
+                       placeholder="Search elements by name, symbol, or category..." 
+                       autocomplete="off">
+                <button class="clear-search" id="clear-search" aria-label="Clear search">
+                    <span class="material-icons">close</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <nav class="nav-tabs">
+        <div class="container">
+            <div class="tabs-wrapper">
+                <button class="tab-btn active" data-tab="periodic-table">
+                    <span class="material-icons">grid_view</span>
+                    Periodic Table
+                </button>
+                <button class="tab-btn" data-tab="categories">
+                    <span class="material-icons">category</span>
+                    Categories
+                </button>
+                <button class="tab-btn" data-tab="dev-clock">
+                    <span class="material-icons">schedule</span>
+                    Dev Clock
+                </button>
+                <button class="tab-btn" data-tab="semantic-gravity">
+                    <span class="material-icons">all_out</span>
+                    Semantic Field
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Periodic Table Tab -->
+            <div id="periodic-table" class="tab-content active">
+                <div class="section-header">
+                    <h2>Periodic Table of Noetic Elements</h2>
+                    <p>44 elements organized by developmental rings and system components</p>
+                </div>
+
+                <!-- Category Filter -->
+                <div class="filter-section">
+                    <h3>Filter by Category</h3>
+                    <div class="filter-chips">
+                        <button class="chip active" data-filter="all">All Elements</button>
+                        <button class="chip" data-filter="Imprinting Field">Imprinting</button>
+                        <button class="chip" data-filter="Autogenic Field">Autogenic</button>
+                        <button class="chip" data-filter="Intentional Field">Intentional</button>
+                        <button class="chip" data-filter="Competence Constellation">Competence</button>
+                        <button class="chip" data-filter="Mirror Field">Mirror</button>
+                        <button class="chip" data-filter="Bonding Field">Bonding</button>
+                        <button class="chip" data-filter="Generative Field">Generative</button>
+                        <button class="chip" data-filter="Transcendental Field">Transcendental</button>
+                        <button class="chip" data-filter="Core Architecture">Core</button>
+                        <button class="chip" data-filter="Processing Engine">Processing</button>
+                        <button class="chip" data-filter="Glyph System">Glyphs</button>
+                    </div>
+                </div>
+
+                <!-- Aspectual Rings Section -->
+                <div class="elements-section">
+                    <h3>Aspectual Rings (Developmental Fields)</h3>
+                    <div class="rings-grid" id="rings-grid">
+                        <!-- Ring elements will be dynamically populated -->
+                    </div>
+                </div>
+
+                <!-- System Components Section -->
+                <div class="elements-section">
+                    <h3>System Components</h3>
+                    <div class="system-grid" id="system-grid">
+                        <!-- System elements will be dynamically populated -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categories Tab -->
+            <div id="categories" class="tab-content">
+                <div class="section-header">
+                    <h2>Element Categories</h2>
+                    <p>Explore elements organized by their functional categories</p>
+                </div>
+                <div class="categories-grid" id="categories-grid">
+                    <!-- Category cards will be dynamically populated -->
+                </div>
+            </div>
+
+            <!-- Developmental Clock Tab -->
+            <div id="dev-clock" class="tab-content">
+                <div class="section-header">
+                    <h2>Developmental Clock</h2>
+                    <p>12-stage temporal arc mapping of consciousness development</p>
+                </div>
+                <div class="clock-container">
+                    <div class="clock-face" id="clock-face">
+                        <!-- Clock stages will be dynamically populated -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Semantic Gravity Tab -->
+            <div id="semantic-gravity" class="tab-content">
+                <div class="section-header">
+                    <h2>Semantic Gravity Field</h2>
+                    <p>Visualizing the coherence forces between elements</p>
+                </div>
+                <div class="gravity-visualization">
+                    <div class="coming-soon">
+                        <span class="material-icons">psychology</span>
+                        <p>Advanced semantic field visualization coming soon...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Element Detail Modal -->
+    <div class="modal" id="element-modal">
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3 id="modal-title">Element Details</h3>
+                <button class="btn btn--secondary modal-close" id="modal-close" aria-label="Close modal">
+                    <span class="material-icons">close</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="element-detail">
+                    <div class="element-visual">
+                        <div class="element-symbol-large" id="modal-symbol">Im</div>
+                        <div class="atomic-number-large" id="modal-atomic">1</div>
+                        <div class="frequency-display" id="modal-frequency">432 Hz</div>
+                    </div>
+                    <div class="element-info">
+                        <div class="info-group">
+                            <label>Name:</label>
+                            <span id="modal-name">Imprint</span>
+                        </div>
+                        <div class="info-group">
+                            <label>Category:</label>
+                            <span id="modal-category">Imprinting Field</span>
+                        </div>
+                        <div class="info-group">
+                            <label>Ring:</label>
+                            <span id="modal-ring">Ring 1</span>
+                        </div>
+                        <div class="info-group">
+                            <label>Active Stages:</label>
+                            <span id="modal-stages">All</span>
+                        </div>
+                        <div class="info-group">
+                            <label>Description:</label>
+                            <span id="modal-description">Root memory-field foundation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Action Button -->
+    <button class="fab" id="fab" aria-label="Quick actions">
+        <span class="material-icons">tune</span>
+    </button>
+
+    <!-- Accessibility announcements -->
+    <div id="announcements" aria-live="polite" class="sr-only"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
